@@ -66,6 +66,7 @@ My tests included the integration of MongoDB.(db name:"gullin",it has 3 collecti
 1. expendituredb:
     
     1) database schema
+    
         let ExpenditureSchema = new mongoose.Schema({
             username:String,
             date: String,
@@ -74,7 +75,9 @@ My tests included the integration of MongoDB.(db name:"gullin",it has 3 collecti
             description:  {type: String, default:null}
         },
         { collection: 'expendituredb' });
+        
     2) json document structure example
+    
         {
           "_id": {
            "$oid": "5bdd7ec0ef72153750b2df72"
@@ -90,6 +93,7 @@ My tests included the integration of MongoDB.(db name:"gullin",it has 3 collecti
 2. incomedb:
 
     1) database schema
+    
         let IncomeSchema = new mongoose.Schema({
             username:String,
             date: String,
@@ -98,7 +102,9 @@ My tests included the integration of MongoDB.(db name:"gullin",it has 3 collecti
             description:  {type: String, default:null}
         },
         { collection: 'incomedb' });
+        
     2) json document structure example
+    
         {
           "_id": {
             "$oid": "5bda4402467b3521a4b4a3a9"
@@ -114,29 +120,32 @@ My tests included the integration of MongoDB.(db name:"gullin",it has 3 collecti
 3. userdb:
 
     1) database schema
+    
         let UserSchema = new mongoose.Schema({
             username: { type:String, unique:true, required: true, writable: false},
             password: { type:String, unique:true, required: true, writable: false,},
             profile:{ gender: String,
                       email: String,
                       phone: String
-         },
+            },
         },
         { collection: 'userdb' });
-    2) json document structure example
+          
+      2) json document structure example
+      
         {
-          "_id": {
-             "$oid": "5bda48a9467b3521a4b4a3b5"
-          },
-          "profile": {
-          "gender": "female",
-          "email": "1804094745@qq.com",
-          "phone": "13046529705"
-          },
-          "username": "gullveig",
-          "password": "qwert1997",
-          "__v": 0
-        }
+            "_id": {
+               "$oid": "5bda48a9467b3521a4b4a3b5"
+            },
+            "profile": {
+            "gender": "female",
+            "email": "1804094745@qq.com",
+            "phone": "13046529705"
+            },
+            "username": "gullveig",
+            "password": "qwert1997",
+            "__v": 0
+         }
 
 
 
