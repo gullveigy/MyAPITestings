@@ -67,69 +67,69 @@ My tests included the integration of MongoDB.(db name:"gullin",it has 3 collecti
     
     1) database schema
     
-        let ExpenditureSchema = new mongoose.Schema({
-            username:String,
-            date: String,
-            payment:String,
-            amount: Number,
-            description:  {type: String, default:null}
-        },
-        { collection: 'expendituredb' });
+           let ExpenditureSchema = new mongoose.Schema({
+               username:String,
+               date: String,
+               payment:String,
+               amount: Number,
+               description:  {type: String, default:null}
+           },
+           { collection: 'expendituredb' });
         
     2) json document structure example
     
-        {
-          "_id": {
-           "$oid": "5bdd7ec0ef72153750b2df72"
-        },
-          "description": "Latte",
-          "username": "gullveig",
-          "date": "2018-10-15",
-          "payment": "Alipay",
-          "amount": 4,
-          "__v": 0
-        }
+           {
+             "_id": {
+              "$oid": "5bdd7ec0ef72153750b2df72"
+           },
+             "description": "Latte",
+             "username": "gullveig",
+             "date": "2018-10-15",
+             "payment": "Alipay",
+             "amount": 4,
+             "__v": 0
+           }
 
 2. incomedb:
 
     1) database schema
     
-        let IncomeSchema = new mongoose.Schema({
-            username:String,
-            date: String,
-            incomingmode:String,
-            amount: Number,
-            description:  {type: String, default:null}
-        },
-        { collection: 'incomedb' });
+           let IncomeSchema = new mongoose.Schema({
+               username:String,
+               date: String,
+               incomingmode:String,
+               amount: Number,
+               description:  {type: String, default:null}
+           },
+           { collection: 'incomedb' });
         
     2) json document structure example
     
-        {
-          "_id": {
-            "$oid": "5bda4402467b3521a4b4a3a9"
-        },
-          "description": "benefits",
-          "username": "gullveig",
-          "date": "2018-10-01",
-          "incomingmode": "Alipay",
-          "amount": 78,
-          "__v": 0
-        }
+           {
+             "_id": {
+               "$oid": "5bda4402467b3521a4b4a3a9"
+           },
+             "description": "benefits",
+             "username": "gullveig",
+             "date": "2018-10-01",
+             "incomingmode": "Alipay",
+             "amount": 78,
+             "__v": 0
+           }
 
 3. userdb:
 
     1) database schema
     
-        let UserSchema = new mongoose.Schema({
-            username: { type:String, unique:true, required: true, writable: false},
-            password: { type:String, unique:true, required: true, writable: false,},
-            profile:{ gender: String,
-                      email: String,
-                      phone: String
+           let UserSchema = new mongoose.Schema({
+                 username: { type:String, unique:true, required: true, writable: false},
+                 password: { type:String, unique:true, required: true, writable: false,},
+                 profile:{ gender: String,
+                           email: String,
+                           phone: String
+                 },
             },
-        },
-        { collection: 'userdb' });
+            { collection: 'userdb' });
           
       2) json document structure example
       
